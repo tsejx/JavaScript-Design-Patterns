@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chain of Responsibility</title>
+    <style>
+    .run {
+        display: inline-block;
+        font-size: 1em;
+        padding: 1em 2em;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #ff0081;
+        color: #fff;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+        box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+    }
+    .run:focus {
+        outline: 0;
+    }
+    .input {
+        flex-grow: 1;
+        color: #BFD2FF;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        vertical-align: middle;
+    }
+    </style>
+</head>
+
+<body>
+    <button class="run">Run</button>
+    <input class="input" type="number"/>
+</body>
+<script src="index.js"></script>
+<script>
+    var btn = document.querySelector('.run');
+
+    var input = document.querySelector('.input')
+
+    btn.addEventListener('click', function(){
+        run(input.value)
+    })
+
+
+</script>
+
+</html>
